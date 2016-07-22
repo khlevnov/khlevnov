@@ -1,1 +1,5 @@
-
+{
+    "extra": {
+        "symfony-web-dir": "public_html"
+    }
+}
