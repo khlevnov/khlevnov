@@ -1,0 +1,35 @@
+:root {
+	font-family: $pt-serif;
+	font-size: $base-font-size;
+	line-height: $base-line-height;
+
+	@include breakpoint($medium) {
+		font-size: 1.25 * $base-font-size;
+	}
+
+	@include breakpoint($large) {
+		font-size: 1.5 * $base-font-size;
+	}
+}
+
+::selection {
+	background: #aaf;
+}
+
+* {
+	-webkit-tap-highlight-color: transparent;
+	outline: 0;
+}
+
+html, body {
+	min-height: 100%;
+}
+
+ul {
+	list-style: none;
+}
+
+.wrapper {
+	display: flex;
+	height: 100%;
+}
