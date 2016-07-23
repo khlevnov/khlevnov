@@ -3,7 +3,7 @@
 const gulp = require('gulp');
 const requireDir = require('require-dir');
 
-requireDir('./tasks');
+requireDir('./frontend/tasks');
 
 gulp.task('watch', function() {
 	gulp.watch('sass/**/*.*', gulp.series('sass'));

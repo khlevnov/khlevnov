@@ -18,6 +18,7 @@ gulp.task('sass', function() {
 		sass({
 			includePaths: [
 				require('node-normalize-scss').includePaths,
+				'./node_modules/breakpoint-sass/stylesheets',
 			]
 		}),
 		rename('styles.css'),
@@ -39,9 +40,6 @@ gulp.task('sass:production', function() {
 		sass({
 			includePaths: [
 				require('node-normalize-scss').includePaths,
-				'./node_modules/breakpoint-sass/stylesheets',
-				'./node_modules/susy/sass',
-				'./node_modules/hamburgers/_sass/hamburgers/hamburgers.scss',
 			]
 		}),
 		rename('styles.css'),
@@ -49,6 +47,6 @@ gulp.task('sass:production', function() {
 		autoprefixer({browsers: ['last 5 versions']}),
 		cleanCSS(),
 		rename('styles.css'),
-		gulp.dest('web/styles')
+		gulp.dest('public_html/styles')
 	);
 });

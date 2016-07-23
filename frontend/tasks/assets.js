@@ -3,49 +3,29 @@
 const gulp = require('gulp');
 
 gulp.task('fonts', function() {
-	return gulp.src('frontend/fonts/**')
+	return gulp.src('frontend/assets/fonts/**')
 		.pipe(gulp.dest('build/fonts'));
 });
 
 gulp.task('images', function() {
-	return gulp.src('frontend/img/**')
-		.pipe(gulp.dest('build/img'));
-});
-
-gulp.task('pages', function() {
-	return gulp.src('frontend/pages/**')
-		.pipe(gulp.dest('build'));
-});
-
-gulp.task('scripts', function() {
-	return gulp.src('frontend/scripts/**')
-		.pipe(gulp.dest('build/scripts'));
+	return gulp.src('frontend/assets/images/**')
+		.pipe(gulp.dest('build/images'));
 });
 
 gulp.task('assets',
-	gulp.parallel('fonts', 'pages', 'images', 'scripts')
+	gulp.parallel('fonts', 'images')
 );
 
 gulp.task('fonts:production', function() {
-	return gulp.src('frontend/fonts/**')
-		.pipe(gulp.dest('web/fonts'));
+	return gulp.src('frontend/assets/fonts/**')
+		.pipe(gulp.dest('public_html/fonts'));
 });
 
 gulp.task('images:production', function() {
-	return gulp.src('frontend/img/**')
-		.pipe(gulp.dest('web/img'));
-});
-
-gulp.task('pages:production', function() {
-	return gulp.src('frontend/pages/**')
-		.pipe(gulp.dest('web/pages'));
-});
-
-gulp.task('scripts:production', function() {
-	return gulp.src('frontend/scripts/**')
-		.pipe(gulp.dest('web/scripts'));
+	return gulp.src('frontend/assets/images/**')
+		.pipe(gulp.dest('public_html/images'));
 });
 
 gulp.task('assets:production',
-	gulp.parallel('fonts:production', 'pages:production', 'images:production', 'scripts:production')
+	gulp.parallel('fonts:production', 'images:production')
 );
