@@ -7,12 +7,11 @@ requireDir('./frontend/tasks');
 
 gulp.task('watch', function() {
 	gulp.watch('sass/**/*.*', gulp.series('sass'));
-	gulp.watch('pages/*.*', gulp.series('pages'));
-	gulp.watch('js/*.*', gulp.series('scripts'));
+	gulp.watch('views/*.*', gulp.series('views'));
 });
 
 gulp.task('build',
-	gulp.parallel('sass', 'assets')
+	gulp.parallel('sass', 'views', 'assets')
 );
 
 gulp.task('build:production',

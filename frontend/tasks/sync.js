@@ -5,9 +5,9 @@ const browserSync = require('browser-sync');
 
 gulp.task('sync', function() {
 	browserSync.init({
-		host: 'khlevnov.localhost',
+		host: 'build.khlevnov.localhost',
 		open: 'external',
-		proxy: 'khlevnov.localhost',
+		proxy: 'build.khlevnov.localhost',
 		notify: false
 	});
 	browserSync.watch([

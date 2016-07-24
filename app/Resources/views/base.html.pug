@@ -1,12 +1,9 @@
 doctype html
-html(lang='ru')
+html(lang="ru")
     head
-        title= name
+        meta(charset="utf8")
+        title Олег Хлевнов — Full-stack web developer
+        meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no")
+        link(href="/styles/styles.css", rel="stylesheet")
     body
-        h1 Jade - node template engine
-        #container.col
-            p.
-                Jade is a terse and simple
-                templating language with a
-                strong focus on performance
-                and powerful features.
+        block layout
