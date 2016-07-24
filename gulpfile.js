@@ -6,8 +6,11 @@ const requireDir = require('require-dir');
 requireDir('./frontend/tasks');
 
 gulp.task('watch', function() {
-	gulp.watch('sass/**/*.*', gulp.series('sass'));
-	gulp.watch('views/*.*', gulp.series('views'));
+	gulp.watch([
+        'frontend/sass/**/*.scss',
+        'frontend/blocks/**/*.scss',
+    ], gulp.series('sass'));
+	gulp.watch('frontend/views/**/*.pug', gulp.series('views'));
 });
 
 gulp.task('build',
