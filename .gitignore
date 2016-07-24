@@ -15,5 +15,3 @@
 !var/SymfonyRequirements.php
 /vendor/
 /public_html/bundles/
-/public_html/fonts/
-/public_html/styles/
