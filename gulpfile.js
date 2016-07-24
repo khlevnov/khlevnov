@@ -14,11 +14,19 @@ gulp.task('watch', function() {
 });
 
 gulp.task('build',
-	gulp.parallel('sass', 'views', 'assets')
+	gulp.parallel(
+        'sass',
+        'views',
+        'assets'
+    )
 );
 
-gulp.task('build:production',
-	gulp.parallel('sass:production', 'assets:production')
+gulp.task('production',
+	gulp.parallel(
+        'sass:production',
+        'views:production',
+        'assets:production'
+    )
 );
 
 gulp.task('default',

@@ -13,8 +13,6 @@ class DefaultController extends Controller
      */
     public function indexAction(Request $request)
     {
-        return $this->render('base.html.pug', [
-            'name' => 'Oleg'
-        ]);
+        return $this->render('default/index.html.pug');
     }
 }

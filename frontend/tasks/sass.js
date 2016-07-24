@@ -40,6 +40,7 @@ gulp.task('sass:production', function() {
 		sass({
 			includePaths: [
 				require('node-normalize-scss').includePaths,
+				'./node_modules/breakpoint-sass/stylesheets',
 			]
 		}),
 		rename('styles.css'),
