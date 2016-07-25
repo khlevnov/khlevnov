@@ -1,0 +1,8 @@
+extends ../base.html.pug
+
+include ../../blocks/article/article
+
+block layout
+    .articles
+        each article in articles
+            +article(article)
