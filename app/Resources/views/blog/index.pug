@@ -1,8 +1,7 @@
-extends ../base.html.pug
-
-include ../../blocks/article/article.html.pug
+extends ../base.pug
 
 block layout
+    include ../../blocks/article/article.pug
     .container.articles
         each article in articles
             +article(article)(class="articles__item")

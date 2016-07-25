@@ -3,7 +3,7 @@ const gulp = require('gulp'),
     pug = require('gulp-pug');
 
 gulp.task('views', function() {
-    var fakedata = require(__dirname + '/../json/fakedata.json');
+    var fakedata = require(__dirname + '/../json/fakedata.js');
 
     return gulp.src('frontend/views/**/*.pug')
         .pipe(pug({

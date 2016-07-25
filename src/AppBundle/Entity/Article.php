@@ -26,14 +26,14 @@ class Article
      *
      * @ORM\Column(name="title", type="string", length=255, nullable=true)
      */
-    private $title;
+    public $title;
 
     /**
      * @var string
      *
      * @ORM\Column(name="text", type="text", nullable=true)
      */
-    private $text;
+    public $text;
 
 
     /**
@@ -94,4 +94,3 @@ class Article
         return $this->text;
     }
 }
-
