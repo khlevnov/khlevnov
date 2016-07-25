@@ -1,4 +1,5 @@
 :root {
+    box-sizing: border-box;
 	font-family: $pt-serif;
 	font-size: $base-font-size;
 	line-height: $base-line-height;
@@ -24,12 +25,13 @@
 html, body {
 	height: 100%;
     margin: 0;
+    min-width: 320px;
 }
 
 ul {
 	list-style: none;
 }
-figure, ul {
+figure, ul, p, h1, h2, h3, h4, h5, h6 {
     margin: 0;
 	padding: 0;
 }

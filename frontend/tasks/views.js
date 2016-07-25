@@ -1,4 +1,5 @@
 const gulp = require('gulp'),
+    notify = require('gulp-notify');
     pug = require('gulp-pug');
 
 gulp.task('views', function() {
@@ -9,6 +10,12 @@ gulp.task('views', function() {
             pretty: '    ',
             locals: fakedata
         }))
+        .on('error', notify.onError(function(error) {
+    		return {
+    			title: 'Pug error',
+    			message: error.message
+    		}
+    	}))
         .pipe(gulp.dest('build'));
 });
 

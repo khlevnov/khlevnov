@@ -1,15 +1,15 @@
 'use strict';
 
-const gulp = require('gulp');
-const autoprefixer = require('gulp-autoprefixer');
-const cleanCSS = require('gulp-clean-css');
-const combiner = require('stream-combiner2').obj;
-const mergeMediaQueries = require('gulp-merge-media-queries');
-const notify = require('gulp-notify');
-const rename = require('gulp-rename');
-const requireDir = require('require-dir');
-const sass = require('gulp-sass');
-const sourcemaps = require('gulp-sourcemaps');
+const gulp = require('gulp'),
+    autoprefixer = require('gulp-autoprefixer'),
+    cleanCSS = require('gulp-clean-css'),
+    combiner = require('stream-combiner2').obj,
+    mergeMediaQueries = require('gulp-merge-media-queries'),
+    notify = require('gulp-notify'),
+    rename = require('gulp-rename'),
+    requireDir = require('require-dir'),
+    sass = require('gulp-sass'),
+    sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('sass', function() {
 	return combiner(

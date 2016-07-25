@@ -1,0 +1,16 @@
+.article {
+    border-bottom: 1px solid #999;
+    padding-top: 1rem;
+
+    &__title {
+        font-family: $pt-sans-narrow;
+        font-size: 2rem;
+        font-weight: bold;
+        line-height: 2.5rem;
+        padding-bottom: 1rem;
+    }
+
+    &:last-child {
+        border-bottom: none;
+    }
+}

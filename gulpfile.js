@@ -10,7 +10,10 @@ gulp.task('watch', function() {
         'frontend/sass/**/*.scss',
         'frontend/blocks/**/*.scss',
     ], gulp.series('sass'));
-	gulp.watch('frontend/views/**/*.pug', gulp.series('views'));
+	gulp.watch([
+        'frontend/views/**/*.pug',
+        'frontend/blocks/**/*.pug',
+    ], gulp.series('views'));
 });
 
 gulp.task('build',

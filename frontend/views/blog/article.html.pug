@@ -1,0 +1,7 @@
+extends ../base.html.pug
+
+include ../../blocks/article/article
+
+block layout
+    main.container
+        +article(articles[0])
