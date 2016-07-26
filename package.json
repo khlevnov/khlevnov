@@ -29,6 +29,7 @@
     "gulp-svg-sprite": "^1.2.19",
     "node-normalize-scss": "^1.1.1",
     "require-dir": "^0.3.0",
-    "stream-combiner2": "^1.1.1"
+    "stream-combiner2": "^1.1.1",
+    "webpack": "^1.13.1"
   }
 }
