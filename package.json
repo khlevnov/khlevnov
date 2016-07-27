@@ -16,6 +16,7 @@
   "devDependencies": {
     "breakpoint-sass": "^2.7.0",
     "browser-sync": "^2.11.1",
+    "core-js": "^2.4.1",
     "del": "^2.2.0",
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-autoprefixer": "^3.1.0",
@@ -28,6 +29,7 @@
     "gulp-sourcemaps": "^1.6.0",
     "gulp-svg-sprite": "^1.2.19",
     "node-normalize-scss": "^1.1.1",
+    "prismjs": "^1.5.1",
     "require-dir": "^0.3.0",
     "stream-combiner2": "^1.1.1",
     "webpack": "^1.13.1"
