@@ -18,7 +18,7 @@ gulp.task('sass', function() {
 		sass({
 			includePaths: [
 				require('node-normalize-scss').includePaths,
-				'./node_modules/breakpoint-sass/stylesheets',
+				'./node_modules/breakpoint-sass/stylesheets'
 			]
 		}),
 		rename('styles.css'),
