@@ -63,8 +63,9 @@ services:\n\
             - \"@templating.helper.actions\"\n\
 </code></pre>\n\
 <p>Добавим новое расширение .pug в секцию templating файла app/config/config.yml</p>\n\
-<pre class=\"code language-yaml line-numbers\"><code data-language=\"yaml\">templating:\n\
-engines: ['pug', 'twig', 'php']</code></pre>\n\
+<pre class=\"code language-yaml line-numbers\"><code>\n\
+templating:\n\
+    engines: ['pug', 'twig', 'php']</code></pre>\n\
 <p>Сделаем новый вид, создав новый файл с раширением pug в директории <b>app/Resources/views</b> со следующим содержимым:</p>\n\
 <pre class=\"code language-jade line-numbers\"><code>h1\n\
 | Hello\n\
