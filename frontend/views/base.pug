@@ -1,11 +1,14 @@
 doctype html
 html(lang="ru")
     head
-        meta(charset="utf8")
-        title Олег Хлевнов — Full-stack web developer
-        meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no")
-        link(href="/styles/styles.css", rel="stylesheet")
+        block meta
+            meta(charset="utf8")
+            meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no")
+        block styles
+            link(href="/styles/styles.css", rel="stylesheet")
+        block title
+            title Олег Хлевнов — Full-stack web developer
     body
-        block layout            
+        block layout
         block scripts
             script(src="/js/app.js")

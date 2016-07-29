@@ -3,4 +3,7 @@ extends ../base.pug
 block layout
     include ../../blocks/article/article.pug
     main.container
-        +article(articles[0])
+        +article(article)
+
+block title
+    title= article.title

@@ -5,7 +5,9 @@ namespace AppBundle\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+
 use Doctrine\ORM\Query;
+use AppBundle\Entity\Article;
 
 class DefaultController extends Controller
 {
@@ -14,32 +16,34 @@ class DefaultController extends Controller
      */
     public function indexAction(Request $request)
     {
-        return $this->render('default/index.html.pug');
+        return $this->render('default/index.pug');
     }
 
     /**
-     * Blog list.
+     * Articles list.
      *
-     * @Route("/blog", name="blog")
+     * @Route("/articles", name="articles")
      */
-    public function blogAction()
+    public function showArticlesListAction()
     {
         $em = $this->getDoctrine()->getManager();
 
         $articles = $em->getRepository('AppBundle:Article')->findAll(Query::HYDRATE_ARRAY);
 
-        return $this->render('blog/index.pug', [
+        return $this->render('article/index.pug', [
             'articles' => $articles,
         ]);
     }
 
     /**
-     * Part of page.
+     * Show Article entity.
      *
-     * @Route("/widget", name="widget")
+     * @Route("/articles/{id}", name="article")
      */
-    public function widgetAction()
+    public function showArticleAction(Article $article)
     {
-        return $this->render('widget.pug');
+        return $this->render('article/article.pug', [
+            'article' => $article,
+        ]);
     }
 }
