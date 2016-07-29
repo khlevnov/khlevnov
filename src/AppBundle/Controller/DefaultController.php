@@ -28,8 +28,18 @@ class DefaultController extends Controller
 
         $articles = $em->getRepository('AppBundle:Article')->findAll(Query::HYDRATE_ARRAY);
 
-        return $this->render('blog/index.pug', array(
+        return $this->render('blog/index.pug', [
             'articles' => $articles,
-        ));
+        ]);
+    }
+
+    /**
+     * Part of page.
+     *
+     * @Route("/widget", name="widget")
+     */
+    public function widgetAction()
+    {
+        return $this->render('widget.pug');
     }
 }
