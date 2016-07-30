@@ -10,6 +10,11 @@
         margin-bottom: 1rem;
     }
 
+    &__published {
+        color: #999;
+        margin: 1rem 0;
+    }
+
     &:last-child {
         border-bottom: none;
     }

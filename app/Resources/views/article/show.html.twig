@@ -21,6 +21,10 @@
                 <th>Text</th>
                 <td>{{ article.text }}</td>
             </tr>
+            <tr>
+                <th>Published</th>
+                <td>{% if article.published %}{{ article.published|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
         </tbody>
     </table>
 

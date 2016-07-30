@@ -10,6 +10,7 @@
                 <th>Slug</th>
                 <th>Title</th>
                 <th>Text</th>
+                <th>Published</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -20,6 +21,7 @@
                 <td>{{ article.slug }}</td>
                 <td>{{ article.title }}</td>
                 <td>{{ article.text }}</td>
+                <td>{% if article.published %}{{ article.published|date('Y-m-d H:i:s') }}{% endif %}</td>
                 <td>
                     <ul>
                         <li>

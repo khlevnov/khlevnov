@@ -5,6 +5,7 @@ namespace AppBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 
 class ArticleType extends AbstractType
 {
@@ -18,9 +19,10 @@ class ArticleType extends AbstractType
             ->add('slug')
             ->add('title')
             ->add('text')
+            ->add('published', DatetimeType::class)
         ;
     }
-    
+
     /**
      * @param OptionsResolver $resolver
      */

@@ -26,21 +26,28 @@ class Article
      *
      * @ORM\Column(name="slug", type="string", length=255, nullable=true, unique=true)
      */
-    public $slug;
+    private $slug;
 
     /**
      * @var string
      *
      * @ORM\Column(name="title", type="string", length=255, nullable=true)
      */
-    public $title;
+    private $title;
 
     /**
      * @var string
      *
      * @ORM\Column(name="text", type="text", nullable=true)
      */
-    public $text;
+    private $text;
+
+    /**
+     * @var datetime
+     *
+     * @ORM\Column(name="published", type="datetime")
+     */
+    private $published;
 
 
     /**
@@ -123,5 +130,29 @@ class Article
     public function getSlug()
     {
         return $this->slug;
+    }
+
+    /**
+     * Set published
+     *
+     * @param \DateTime $published
+     *
+     * @return Article
+     */
+    public function setPublished($published)
+    {
+        $this->published = $published;
+
+        return $this;
+    }
+
+    /**
+     * Get published
+     *
+     * @return \DateTime
+     */
+    public function getPublished()
+    {
+        return $this->published;
     }
 }
