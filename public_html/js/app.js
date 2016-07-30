@@ -53,7 +53,6 @@
 	    __webpack_require__(5);
 
 	    __webpack_require__(6);
-	    //require('prismjs/plugins/line-numbers/prism-line-numbers.min.js');
 
 	    Prism.plugins.NormalizeWhitespace.setDefaults({
 	    	'remove-trailing': true,
@@ -65,7 +64,7 @@
 	    });
 
 	    var code = block.querySelector('code').innerHTML;
-	    var language = block.querySelector('code').dataset.language;
+	    var language = block.dataset.language;
 	    var html = Prism.highlight(code, Prism.languages[language]);
 	    block.innerHTML = html;
 	});
