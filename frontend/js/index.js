@@ -16,7 +16,7 @@ Array.from(document.querySelectorAll('.code')).forEach(function(block) {
     	'indent': 0
     });
 
-    var code = block.querySelector('code').innerHTML;
+    var code = block.querySelector('code').textContent;
     var language = block.dataset.language;
     var html = Prism.highlight(code, Prism.languages[language]);
     block.querySelector('code').innerHTML = html;

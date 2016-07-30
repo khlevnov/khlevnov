@@ -18,4 +18,8 @@
     &:last-child {
         border-bottom: none;
     }
+
+    &--single {
+        padding-bottom: 2rem;
+    }
 }
