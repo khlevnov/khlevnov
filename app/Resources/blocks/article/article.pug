@@ -1,5 +1,8 @@
 mixin article(article)
     .article&attributes(attributes)
         .article__title= article.title
-        .article__published Опубликовано: <?php echo $article->getPublished()->format('d.m.Y'); ?>
+        .article__published
+            | Опубликовано:
+            :php
+                echo $article->getPublished()->format('d.m.Y');
         .typical.article__text!= article.text
