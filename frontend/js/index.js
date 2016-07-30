@@ -6,19 +6,18 @@ Array.from(document.querySelectorAll('.code')).forEach(function(block) {
     require('prismjs/components/prism-php.min.js');
     require('prismjs/components/prism-jade.min.js');
 
-    require('prismjs/plugins/normalize-whitespace/prism-normalize-whitespace.min.js');
+    require('prismjs/plugins/normalize-whitespace/prism-normalize-whitespace.js');
 
     Prism.plugins.NormalizeWhitespace.setDefaults({
     	'remove-trailing': true,
     	'remove-indent': true,
     	'left-trim': true,
     	'right-trim': true,
-    	'indent': 0,
-    	'tabs-to-spaces': 4
+    	'indent': 0
     });
 
     var code = block.querySelector('code').innerHTML;
     var language = block.dataset.language;
     var html = Prism.highlight(code, Prism.languages[language]);
-    block.innerHTML = html;
+    block.querySelector('code').innerHTML = html;
 });

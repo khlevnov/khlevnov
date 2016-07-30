@@ -2,9 +2,7 @@ mixin article(article)
     .article&attributes(attributes)
         .article__title= article.title
         .article__published
-            | Опубликовано: 
-            if article.published
-                =article.published
-            else
-                <?php echo $article->getPublished()->format('d.m.Y'); ?>
+            | Опубликовано:
+            :php
+                echo $article->getPublished()->format('d.m.Y');
         .typical.article__text!= article.text
