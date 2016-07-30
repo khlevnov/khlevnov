@@ -24,6 +24,13 @@ class Article
     /**
      * @var string
      *
+     * @ORM\Column(name="slug", type="string", length=255, nullable=true, unique=true)
+     */
+    public $slug;
+
+    /**
+     * @var string
+     *
      * @ORM\Column(name="title", type="string", length=255, nullable=true)
      */
     public $title;
@@ -92,5 +99,29 @@ class Article
     public function getText()
     {
         return $this->text;
+    }
+
+    /**
+     * Set slug
+     *
+     * @param string $slug
+     *
+     * @return Article
+     */
+    public function setSlug($slug)
+    {
+        $this->slug = $slug;
+
+        return $this;
+    }
+
+    /**
+     * Get slug
+     *
+     * @return string
+     */
+    public function getSlug()
+    {
+        return $this->slug;
     }
 }

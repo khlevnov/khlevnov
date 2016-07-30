@@ -22,7 +22,7 @@ class DefaultController extends Controller
     /**
      * Articles list.
      *
-     * @Route("/articles", name="articles")
+     * @Route("/articles/{page}", name="articles_list", requirements={"page": "\d+"})
      */
     public function showArticlesListAction()
     {
@@ -38,10 +38,14 @@ class DefaultController extends Controller
     /**
      * Show Article entity.
      *
-     * @Route("/articles/{id}", name="article")
+     * @Route("/articles/{slug}", name="article_item")
      */
-    public function showArticleAction(Article $article)
+    public function showArticleAction($slug)
     {
+        $em = $this->getDoctrine()->getManager();
+
+        $article = $em->getRepository('AppBundle:Article')->findOneBySlug($slug);
+
         return $this->render('article/article.pug', [
             'article' => $article,
         ]);
