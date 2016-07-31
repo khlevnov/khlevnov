@@ -13,6 +13,6 @@ gulp.task('sync', function() {
 	browserSync.watch([
 		'build/*.html',
 		'build/styles/styles.css',
-		'build/js/app.js',
+		'build/js/**/*.js',
 	]).on('change', browserSync.reload);
 });

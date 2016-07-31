@@ -1,6 +1,9 @@
 const webpack = require('webpack');
 
 module.exports = {
+    output: {
+        publicPath: '/js/'
+    },
     watch: false,
     watchOptions: {
         aggregateTimeout: 100
