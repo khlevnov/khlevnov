@@ -21,3 +21,4 @@ Array.from(document.querySelectorAll('.code')).forEach(function(block) {
     var html = Prism.highlight(code, Prism.languages[language]);
     block.querySelector('code').innerHTML = html;
 });
+console.log('hello');

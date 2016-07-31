@@ -20,7 +20,8 @@ gulp.task('build',
 	gulp.parallel(
         'sass',
         'views',
-        'assets'
+        'assets',
+        'webpack'
     )
 );
 
@@ -28,10 +29,11 @@ gulp.task('production',
 	gulp.parallel(
         'sass:production',
         'views:production',
-        'assets:production'
+        'assets:production',
+        'webpack:production'
     )
 );
 
 gulp.task('default',
-	gulp.series('clean', 'build', gulp.parallel('watch', 'sync'))
+	gulp.series('clean', 'build', gulp.parallel('watch', 'sync', 'webpack:watch'))
 );

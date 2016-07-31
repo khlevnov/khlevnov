@@ -1,5 +1,5 @@
 const gulp = require('gulp'),
-    notify = require('gulp-notify');
+    notify = require('gulp-notify'),
     pug = require('gulp-pug');
 
 gulp.task('views', function() {
