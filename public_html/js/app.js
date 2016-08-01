@@ -112,7 +112,13 @@
 	Array.from(document.querySelectorAll('.code')).forEach(function(block) {
 	    let code = block.querySelector('code'),
 	        codeContent = code.textContent,
-	        language = block.dataset.language;
+	        language = block.dataset.language,
+	        languages = [
+	            'bash',
+	            'yaml',
+	            'php',
+	            'jade'
+	        ];
 
 	    __webpack_require__.e/* nsure */(1, function(require) {
 	        // Require core
@@ -126,15 +132,14 @@
 	            },
 	            highlightedCode;
 
-	        // Require languages
-	        __webpack_require__(4);
-	        __webpack_require__(5);
-	        __webpack_require__(6);
-	        __webpack_require__(7);
-
 	        // Require plugins
-	        __webpack_require__(8);
+	        __webpack_require__(4);
 	        Prism.plugins.NormalizeWhitespace.setDefaults(normalizeWhitespaceConfig);
+
+	        // Require languages
+	        languages.forEach(function(language) {
+	            __webpack_require__(5)('bundle!prismjs/components/' + language + '.js');
+	        });
 
 	        highlightedCode = Prism.highlight(codeContent, Prism.languages[language])
 	        code.innerHTML = highlightedCode;
