@@ -28,10 +28,10 @@ Array.from(document.querySelectorAll('.code')).forEach(function(block) {
         // Require languages
         languages.forEach(function(language) {
             require.context(
-                'bundle!prismjs/components/',
+                'prismjs/components/',
                 false,
                 /prism-(bash|yaml|php|jade)\.min\.js/
-            )('bundle!prismjs/components/' + language + '.js');
+            )('prismjs/components/' + language + '.js');
         });
 
         highlightedCode = Prism.highlight(codeContent, Prism.languages[language])
