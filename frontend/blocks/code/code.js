@@ -1,14 +1,8 @@
 Array.from(document.querySelectorAll('.code')).forEach(function(codeBlock) {
     let code = codeBlock.querySelector('code'),
         codeContent = code.textContent,
-        language = codeBlock.dataset.language,
-        languages = [
-            'bash',
-            'yaml',
-            'php',
-            'jade'
-        ];
-
+        language = codeBlock.dataset.language;
+        
     require.ensure([], function(require) {
         // Require core
         let Prism = require('prismjs'),
@@ -26,13 +20,10 @@ Array.from(document.querySelectorAll('.code')).forEach(function(codeBlock) {
         Prism.plugins.NormalizeWhitespace.setDefaults(normalizeWhitespaceConfig);
 
         // Require languages
-        languages.forEach(function(language) {
-            require.context(
-                'prismjs/components/',
-                false,
-                /prism-(bash|yaml|php|jade)\.min\.js/
-            )('prismjs/components/' + language + '.js');
-        });
+        require('prismjs/components/prism-bash.min.js');
+        require('prismjs/components/prism-yaml.min.js');
+        require('prismjs/components/prism-php.min.js');
+        require('prismjs/components/prism-jade.min.js');
 
         highlightedCode = Prism.highlight(codeContent, Prism.languages[language])
         code.innerHTML = highlightedCode;
