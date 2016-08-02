@@ -1,0 +1,37 @@
+.landing-header {
+    align-items: center;
+    background-color: rgba(232, 72, 94, 0.8);
+    color: #fff;
+    display: flex;
+    font-family: $pt-serif-caption;
+    font-size: 2.5rem;
+    justify-content: center;
+    height: 100vh;
+
+    &::before {
+        background-attachment: fixed;
+        background-image: url('/media/landing-header@1920_40.jpg');
+        background-size: cover;
+        background-position: center center;
+        content: '';
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: -1;
+    }
+
+    @include breakpoint(640px) {
+        font-size: 3rem;
+    }
+
+    &__inner {
+        text-align: center;
+    }
+
+    &__note {
+        font-family: $pt-serif;
+        font-size: 1.5rem;
+    }
+}
