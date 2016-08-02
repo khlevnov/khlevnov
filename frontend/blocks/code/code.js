@@ -1,7 +1,7 @@
-Array.from(document.querySelectorAll('.code')).forEach(function(block) {
-    let code = block.querySelector('code'),
+Array.from(document.querySelectorAll('.code')).forEach(function(codeBlock) {
+    let code = codeBlock.querySelector('code'),
         codeContent = code.textContent,
-        language = block.dataset.language,
+        language = codeBlock.dataset.language,
         languages = [
             'bash',
             'yaml',

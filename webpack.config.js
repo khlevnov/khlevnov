@@ -1,8 +1,13 @@
 const webpack = require('webpack');
 
 module.exports = {
+    context: __dirname + '/frontend',
+    entry: './js/app',
+
     output: {
-        publicPath: '/js/'
+        path: __dirname + '/build',
+        publicPath: '/js/',
+        filename: 'app.js'
     },
     watch: false,
     watchOptions: {
