@@ -1,1 +1,2 @@
-require('../blocks/code/code.js');
+//import '../blocks/code/code';
+import '../blocks/menu/menu';

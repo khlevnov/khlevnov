@@ -1,10 +1,17 @@
-.landing-menu {
+.menu {
     background: #fff;
     color: #333;
     display: flex;
     font-family: $pt-serif-caption;
     font-size: 0;
+    height: 4rem;
     line-height: 4rem;
+
+    &--fixed {
+        left: 0;
+        position: fixed;
+        top: 0;
+    }
 
     &__inner {
         display: flex;
