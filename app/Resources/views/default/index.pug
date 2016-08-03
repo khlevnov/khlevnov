@@ -1,10 +1,13 @@
 extends ../base.pug
 
 block layout
+    header.landing-header.screen
+        .landing-header__inner
+            .landing-header__title Олег Хлевнов
+            .landing-header__note Full-stack web developer
+
     main.wrapper
         .person
-            .person__name Олег Хлевнов
-            .person__comment Full-stack web developer
             ul.person__links
                 li.person__link Над чем я работаю:
                 li.person__link
@@ -14,7 +17,7 @@ block layout
             ul.person__links
                 li.person__link Контакты:
                 li.person__link
-                    a(href='mailto:olegkhlevnov@gmail.com') oleg@khlevnov.com
+                    a(href='mailto:olegkhlevnov@gmail.com') oleg@khlevnov.ru
                 li.person__link
                     a(href='//vk.com/khlevnov') vk.com/khlevnov
             ul.person__links
