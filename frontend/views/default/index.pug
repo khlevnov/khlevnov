@@ -1,26 +1,46 @@
 extends ../base.pug
 
 block layout
-    header.landing-header.screen
-        .landing-header__inner
-            .landing-header__title Олег Хлевнов
+    header.screen.screen--centered.landing-header
+        .screen__inner.screen__inner--centered
+            .screen__title Олег Хлевнов
             .landing-header__note Full-stack web developer
+        .landing-menu.landing-header__menu
+            .landing-menu__title
+            ul.landing-menu__inner
+                li.landing-menu__item Статьи
+                li.landing-menu__item Проекты
+                li.landing-menu__item Обо мне
+                li.landing-menu__item Контакты
 
-    main.wrapper
-        .person
-            ul.person__links
-                li.person__link Над чем я работаю:
-                li.person__link
-                    a(href='//www.kinkstore.ru') www.kinkstore.ru
-                li.person__link
-                    a(href='//azgaz.ru') azgaz.ru
-            ul.person__links
-                li.person__link Контакты:
-                li.person__link
-                    a(href='mailto:olegkhlevnov@gmail.com') oleg@khlevnov.ru
-                li.person__link
-                    a(href='//vk.com/khlevnov') vk.com/khlevnov
-            ul.person__links
-                li.person__link Статьи:
-                li.person__link
+    section.screen.landing-articles.landing-header
+        .screen__inner.landing-articles__list
+            header.screen__title Статьи
+            ul.landing-articles__list
+                li.landing-articles__item
                     a(href='/articles/how-to-use-pug-in-symfony') Интеграция Pug в Symfony
+
+    main
+        .screen.screen--centered
+            .screen__inner Третий экран
+
+        .screen.screen--centered
+            .screen__inner Чертвертый экран
+
+        .screen.screen--centered
+            .screen__inner Пятый экран
+
+        .landing-header.screen
+            .person
+                ul.person__links
+                    li.person__link Над чем я работаю:
+                    li.person__link
+                        a(href='//www.kinkstore.ru') www.kinkstore.ru
+                    li.person__link
+                        a(href='//azgaz.ru') azgaz.ru
+                ul.person__links
+                    li.person__link Контакты:
+                    li.person__link
+                        a(href='mailto:olegkhlevnov@gmail.com') oleg@khlevnov.ru
+                    li.person__link
+                        a(href='//vk.com/khlevnov') vk.com/khlevnov

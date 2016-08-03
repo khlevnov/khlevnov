@@ -1,0 +1,10 @@
+.landing-articles {
+    align-items: center;
+    display: flex;
+    padding-left: 10%;
+
+    &__item {
+        line-height: 2rem;
+        font-size: 1.2rem;
+    }
+}
