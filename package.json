@@ -33,6 +33,7 @@
     "gulp-sass": "^2.2.0",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-svg-sprite": "^1.2.19",
+    "lodash": "^4.14.1",
     "node-normalize-scss": "^1.1.1",
     "prismjs": "^1.5.1",
     "require-dir": "^0.3.0",

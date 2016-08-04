@@ -1,0 +1,38 @@
+.menu {
+    background: #fff;
+    color: #333;
+    display: flex;
+    font-family: $pt-serif-caption;
+    font-size: 0;
+    height: 4rem;
+    line-height: 4rem;
+
+    &--fixed {
+        left: 0;
+        position: fixed;
+        top: 0;
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+
+        @include breakpoint(641px) {
+            margin: 0 auto;
+            width: 75%;
+        }
+
+        @include breakpoint(961px) {
+            width: 50%;
+        }
+    }
+
+    &__item {
+        color: #999;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+    }
+}

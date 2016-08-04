@@ -14,12 +14,13 @@
 }
 
 ::selection {
-	background: #aaf;
+	background: rgba(232, 72, 94, 0.7);
 }
 
 * {
-	-webkit-tap-highlight-color: transparent;
+    box-sizing: border-box;
 	outline: 0;
+    -webkit-tap-highlight-color: transparent;
 }
 
 html, body {

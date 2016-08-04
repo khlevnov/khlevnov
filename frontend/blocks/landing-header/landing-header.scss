@@ -1,5 +1,4 @@
 .landing-header {
-    align-items: center;
     background: linear-gradient(
       rgba(232, 72, 94, 0.7),
       rgba(232, 72, 94, 0.7)
@@ -8,27 +7,20 @@
     background-size: cover;
     background-position: center center;
     color: #fff;
-    display: flex;
-    justify-content: center;
-
-    &__inner {
-        text-align: center;
-    }
-
-    &__title {
-        font-family: $pt-serif-caption;
-        font-size: 2.5rem;
-
-        @include breakpoint(640px) {
-            font-size: 3rem;
-        }
-    }
+    height: calc(100vh - 4rem) !important;
 
     &__note {
         font-size: 1.3rem;
 
-        @include breakpoint(640px) {
+        @include breakpoint(641px) {
             font-size: 1.5rem;
         }
+    }
+
+    &__menu {
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        width: 100%;
     }
 }

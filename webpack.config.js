@@ -1,13 +1,14 @@
 const webpack = require('webpack');
 
 module.exports = {
-    context: __dirname + '/frontend',
-    entry: './js/app',
-
+    context: require('path').join(__dirname, 'frontend'),
+    entry: {
+        app: './js/app',
+    },
     output: {
-        path: __dirname + '/build',
+        path: __dirname + '/build/js',
         publicPath: '/js/',
-        filename: 'app.js'
+        filename: '[name].js'
     },
     watch: false,
     watchOptions: {
@@ -17,7 +18,7 @@ module.exports = {
         loaders: [
             {
                 test: /\.js$/,
-                include: __dirname + '/frontend',
+                exclude: /(node_modules|bower_components)/,
                 loader: 'babel',
                 query: {
                     presets: ['es2015']

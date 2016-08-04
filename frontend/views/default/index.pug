@@ -1,26 +1,47 @@
 extends ../base.pug
 
 block layout
-    header.landing-header.screen
-        .landing-header__inner
-            .landing-header__title Олег Хлевнов
-            .landing-header__note Full-stack web developer
+    main
+        section.screen.screen--centered.landing-header
+            .screen__inner.screen__inner--centered
+                .screen__title Олег Хлевнов
+                .landing-header__note Full-stack web developer
+            #menu.menu.landing-header__menu
+                .menu__title
+                ul.menu__inner
+                    li.menu__item(data-scroll='screen-articles') Статьи
+                    li.menu__item(data-scroll='screen-projects') Проекты
+                    li.menu__item(data-scroll='screen-about') Обо мне
+                    li.menu__item(data-scroll='screen-contacts') Контакты
 
-    main.wrapper
-        .person
-            ul.person__links
-                li.person__link Над чем я работаю:
-                li.person__link
-                    a(href='//www.kinkstore.ru') www.kinkstore.ru
-                li.person__link
-                    a(href='//azgaz.ru') azgaz.ru
-            ul.person__links
-                li.person__link Контакты:
-                li.person__link
-                    a(href='mailto:olegkhlevnov@gmail.com') oleg@khlevnov.ru
-                li.person__link
-                    a(href='//vk.com/khlevnov') vk.com/khlevnov
-            ul.person__links
-                li.person__link Статьи:
-                li.person__link
-                    a(href='/articles/how-to-use-pug-in-symfony') Интеграция Pug в Symfony
+        section.screen.screen--centered#screen-articles
+            .person
+                ul.person__links
+                    li.person__link Статьи:
+                    li.person__link
+                        a(href='/articles/how-to-use-pug-in-symfony') Интеграция Pug в Symfony
+
+        section.screen.screen--centered#screen-projects
+            .person
+                ul.person__links
+                    li.person__link Над чем я работаю:
+                    li.person__link
+                        a(href='//www.kinkstore.ru') www.kinkstore.ru
+                    li.person__link
+                        a(href='//azgaz.ru') azgaz.ru
+
+        section.screen.screen--centered#screen-about
+            .person
+                ul.person__links
+                    li.person__link Где я работаю:
+                    li.person__link
+                        a(href='//www.morizo.ru') www.morizo.ru
+
+        section.screen.screen--centered#screen-contacts
+            .person
+                ul.person__links
+                    li.person__link Контакты:
+                    li.person__link
+                        a(href='mailto:olegkhlevnov@gmail.com') oleg@khlevnov.ru
+                    li.person__link
+                        a(href='//vk.com/khlevnov') vk.com/khlevnov
