@@ -1,2 +1,2 @@
-//import '../blocks/code/code';
+import '../blocks/code/code';
 import '../blocks/menu/menu';
